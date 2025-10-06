@@ -1,0 +1,42 @@
+insert into clientes
+(nome_cliente, morada_cliente)
+values
+("Joao", "Torres Vedras"),
+("Daniel", "Lisboa"),
+("Gui", "Leiria"),
+("Tomas", "Porto"),
+("Miguel", "Algarve");
+
+insert into encomendas
+(idproduto, idcliente, preco)
+values
+(5, 1, 60),
+(1, 3, 25),
+(3, 1, 35),
+(2, 2, 25),
+(4, 4, 5);
+
+insert into transportes
+(matricula, hora_chegada, hora_saida)
+values
+(987243, "10:20", "20:20"),
+(548721, "9:00", "19:00"),
+(095721, "9:50", "19:50"),
+(324165, "11:00", "21:00"),
+(826539, "12:25", "22:25");
+
+insert into produtos
+(nome_produto, preco, fabricante)
+values
+("Mesa Digitalizadora", 15, "wacom"),
+("Comando PS5", 60, "Sony"),
+("Stockings", 5, "Ali-Express"),
+("Pulseira", 2, "Ali-Express"),
+("Aneis", 10, "Pull&Bear");
+
+insert into pagamentos
+(metodo)
+values
+("Visa"),
+("Ctt"),
+("NovoBanco");

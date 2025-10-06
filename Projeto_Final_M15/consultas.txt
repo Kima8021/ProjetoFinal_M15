@@ -1,0 +1,13 @@
+update produtos
+set preco = 8
+where nome_produto = "Aneis";
+
+describe transportes;
+
+select * from produtos;
+
+delete from pagamentos 
+where metodo = "Ctt";
+
+delete from transportes
+where matricula = 826539;

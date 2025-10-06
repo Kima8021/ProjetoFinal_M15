@@ -1,0 +1,44 @@
+create database Loja_Online;
+
+use Loja_Online;
+
+create table clientes
+(
+    id_cliente int primary key auto_increment,
+    nome_cliente varchar(20) not null,
+    morada_cliente varchar(50) not null,
+    encomendas_pendentes int,
+    pagamento varchar(10),
+    foreign key clientes(pagamento) references pagamentos(metodo)
+);
+
+ create table encomendas
+ (
+    id_encom int primary key auto_increment,
+    preco float not null,
+    idproduto int,
+    idcliente int,
+    foreign key(idproduto) references produtos(id_produto),
+    foreign key(idcliente) references clientes(id_cliente)
+);
+
+create table transportes
+(
+    matricula int(6) primary key not null,
+    hora_saida time not null, 
+    hora_chegada time not null
+);
+
+create table produtos
+(
+    id_produto int primary key auto_increment,
+    nome_produto varchar(50) not null, 
+    preco int not null, 
+    fabricante varchar(20) not null
+);
+
+create table pagamentos
+(
+    id_metodo int primary key auto_increment,
+    metodo varchar(15)
+);
